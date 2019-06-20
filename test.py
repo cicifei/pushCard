@@ -33,7 +33,14 @@ class webUiTest(unittest.TestCase):
         every_day = browser.find_element_by_id("bjui-hnav-tree1_2_span")
         every_day.click()
         time.sleep(5)
-
-
+        sign_in = browser.find_element_by_id("sign_in")
+        sign_in.click()
+        time.sleep(5)
+        alert=browser.switch_to.alert
+        #获取alert弹框的文本
+        text=alert.text
+        print(text)
+        alert.accept()
+        time.sleep(5)
 if __name__ == '__main__':
     unittest.main()
