@@ -33,7 +33,8 @@ class webUiTest(unittest.TestCase):
         every_day = browser.find_element_by_id("bjui-hnav-tree1_2_span")
         every_day.click()
         time.sleep(5)
-
-
+        sign_in = browser.find_element_by_xpath("//*[@id='j_custom_form']/div[2]/ul/li[2]/button")
+        sign_in.click()
+        time.sleep(5)
 if __name__ == '__main__':
     unittest.main()
